@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%  if(typeof(error) !="undefined"){%>
+        <% error.forEach(function(err) {%>
+            <h6 style="color:red"><%=err.msg%></h6>
+       <% })%>
+       <% }%>
+
+    <h2>TCC Mall</h2>
+    <h4>Merchant registration form</h4>
+    <p>please fill your details below</p>
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <p>Firstname: <input type="text" name="fn" id=""></p>
+        <p>Lastname: <input type="text" name="ln" id=""></p>
+        <p>Phone Number: <input type="number" name="phone" id=""></p>
+        <p>CAC: Registered <input type="radio" name="cac" id="" value="register">
+                Not Register <input type="radio" name="cac" id="" value="notregister"></p>
+        <p>Username: <input type="text" name="username" id=""></p>
+        <p>Password: <input type="password" name="password" id=""></p>
+        <p>image upload: <input type="file" name="image" id=""></p>
+        <input type="submit" value="click to register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <p>providing safe and convenient digital shopping experience</p>
+    <!-- <p>Merchant ID: <span style="color:blue"></span></p> -->
+    
+    <form action="">
+        <input type="text" name="" id="" placeholder="search for products and brands">
+        <input type="search" name="" id="" value="search">
+    </form>
+    <hr>
+    <ul>
+    <li><a href="products/Computers">Computers</a></li>
+    <li><a href="products/Phones">Phones</a></li>
+    <li><a href="products/Tablets">Tablets</a></li>
+    <li><a href="products/Printers">Printers</a></li>
+    <li><a href="products/Accessories">Accessories</a></li>
+    </ul>
+    <form action="/addproduct" method="post" enctype="multipart/form-data">
+        <p>Product Name : <input type="text" name="productName" id=""> </p>
+        <p>Product Description : <textarea name="description" id="" cols="30" rows="10"></textarea> </p>
+        <p>Poduct Price: <input type="number" name="price" id=""> </p>
+        <% let products =["computer","Phones","Tablet","Printers","Accessories"] %> 
+        <p>product category:<select name="category" id="">
+            <option value="">select the product</option>
+            <%  for(let product of products){%>
+                <option value="<%= product %>"><%= product %></option>
+            <%}%>
+        </select></p>
+        <p>product Image: <input type="file" name="image" id=""> </p>
+        <input type="submit" value="click to submit the product details">
+    </form>
+
+</body>
+</html>

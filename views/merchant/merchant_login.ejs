@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if(message !=''){%>
+        <h2 style="color:green;"><%=message %></h2>
+ <%}%>
+ <% if(error_msg != ''){%>
+   <h6 style="color:red"><%= error_msg %></h6>
+ <%}%>
+    <h2>Tcc mall</h2>
+    <p>please enter your name and password</p>
+    <form action="/login" method="post">
+        <p>username: <input type="text" name="username" id=""></p>
+        <p>password: <input type="password" name="password" id=""></p>
+        <input type="submit" value="click to login">
+    </form>
+</body>
+</html>
